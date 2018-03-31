@@ -1,6 +1,6 @@
-# FableConf Presentation
+# F#eXchange Presentation
 
-This is the project hosting my FableConf 2017 presentation files and projects
+This is the project hosting my F#eXchange 2018 presentation files and projects
 
 ![Presentation sample](https://raw.githubusercontent.com/whitetigle/fableconf2017/master/images/sample.gif)
 

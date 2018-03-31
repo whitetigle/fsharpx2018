@@ -30,7 +30,7 @@ Target "YarnInstal" (fun _ ->
 )
 
 Target "Clean" (fun _ ->
-  seq [ 
+  seq [
     "public/dist"
   ] |> CleanDirs
   runDotnet "clean"

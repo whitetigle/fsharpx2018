@@ -1,97 +1,13 @@
 module State
 
 open System
-open Fable.Core
 open Fable.Import
 open Fable.Import.Browser
-open System.Collections.Generic
-
-type CanvasInfo =
-    {
-      TextContext: CanvasRenderingContext2D
-      DrawingContext: CanvasRenderingContext2D
-      Width: float
-      Height: float
-      ScaleFactor: float
-    }
+open Types
+open Data
 
 let [<Literal>] ParticleSpeed = 2.
 
-// Here mutability is used so that the rendering remains smooths
-// that's often the case with Javascript
-type Particle = {
-  mutable X:float
-  mutable Y:float
-  mutable A:float
-  mutable V:float
-  mutable Life:float
-  mutable Speed:float
-  mutable Size:float
-  mutable LifeDec:float
-  mutable PerlinCoeff:float
-  mutable Color:string
-  mutable Alpha:float
-  Text: string
-}
-
-let EmptyParticle =
-  {
-    X=0.
-    Y= 0.
-    A=0.
-    V=0.
-    Life=0.
-    Speed=0.
-    Size=0.
-    LifeDec=0.
-    PerlinCoeff=0.
-    Color = ""
-    Alpha = 0.
-    Text = ""
-  }
-
-type Saturation = int
-type PaintingKind =
-  | Flows of Saturation
-  | ShowTitle
-  | TextLabel
-
-type Text = string
-type Probability = float
-
-type ScreenLayer =
-  | TopScreen
-  | BottomScreen
-
-type Screen =
-  | Start
-  | StartBackground
-  | DisplayText of string
-  | AddLabel of string
-  | LaunchPainting of PaintingKind
-  | DoNothing
-  | GoNextFrame
-  | ClearScreen of ScreenLayer
-  | NextScreen
-
-type ScreenContent = {
-  Text: string
-}
-
-type Model =
-    {
-      Initialized: bool
-      X : float
-      BottomParticles : Particle []
-      TopParticles : Particle []
-      Screen : Screen
-      Screens : Screen list
-      CurrentIndex : int
-      ScreenContent: ScreenContent
-      CanvasInfo : CanvasInfo
-      BackgroundAnimation: PaintingKind option
-      TopAnimation: PaintingKind option
-    }
 
 
 // ---------------------------* OUR EVENTS  *---------------------------
@@ -126,7 +42,7 @@ module ElmishSubscriptions =
   let subscribeToFrames dispatch =
       let run =
         let rec run (dt:float) =
-          window.requestAnimationFrame(FrameRequestCallback run) |> ignore
+          window.requestAnimationFrame(run) |> ignore
           NewFrame |> dispatch
         run
       run 0.0
@@ -142,32 +58,14 @@ let init (canvasinfo:CanvasInfo) =
           X= 0.
           BottomParticles=[||]
           TopParticles=[||]
-          Screen = DisplayText "Click to continue"
-          Screens =
-            [
-              ClearScreen BottomScreen
-              ClearScreen TopScreen
-              DisplayText "Fun With Canvas & Elmish"
-              ClearScreen TopScreen
-              AddLabel "Highly Immutable"
-              AddLabel "Enthusiastic"
-              AddLabel "Elmish Powered"
-              AddLabel "Fun Fable Presentation"
-              ClearScreen TopScreen
-              DisplayText "Add your own texts!"
-              ClearScreen BottomScreen
-
-              //ClearScreen TopScreen // to clear text canvas
-              //ClearScreen BottomScreen // to clear drawing canvas
-              //Displaytext "mytext" // to display the text using a simple linear fade effect
-              //AddLabel "mytext" // to display the text using some black labels
-
-            ]
+          Screen = DisplayText "F# eXchange 2018"
+          Screens = Data.Screens
           CurrentIndex = 0
           ScreenContent = { Text=""}
           CanvasInfo=canvasinfo
           BackgroundAnimation = None
           TopAnimation = None
+          LastLabelPosition=Top
         }
 
     let subscriptions =
@@ -357,23 +255,62 @@ let update (msg: Msg) (model: Model) =
 
           let particles =
             [|
-                { EmptyParticle with LifeDec=0.1;Alpha=0.1; Size=150.; Text=text }
+                { EmptyParticle with LifeDec=0.1;Alpha=0.1; Size=120.; Text=text }
             |]
 
           // TODO: hopefully we can do concat operation way better!!
           let psa = [model.TopParticles;particles] |> Array.concat
           {model with TopParticles= psa; Screen = DoNothing; TopAnimation=Some ShowTitle }
 
-        // small black labeled texts popping up anywhere
+        // small black labeled texts popping up at given positions
+        | AddLabelWithPosition (text,position) ->
+
+          let x,y,next =
+            match position with
+            | Top ->
+              model.CanvasInfo.Width * 0.4,model.CanvasInfo.Height * 0.25,Right
+
+            | Bottom ->
+              model.CanvasInfo.Width * 0.4,model.CanvasInfo.Height * 0.75,Left
+
+            | Left ->
+              model.CanvasInfo.Width * 0.15,model.CanvasInfo.Height * 0.5,Top
+
+            | Right ->
+              model.CanvasInfo.Width * 0.65,model.CanvasInfo.Height * 0.5,Bottom
+
+          let particles =
+            [|
+                { EmptyParticle with LifeDec=100.; Life=0.1; Size=90.; Text=text; X=x;Y=y }
+            |]
+
+          let psa = [model.TopParticles;particles] |> Array.concat
+          {model with LastLabelPosition=next; TopParticles= psa; Screen = DoNothing; TopAnimation=Some TextLabel }
+
         | AddLabel text ->
 
-          // note: we can do way better positionning than this ;)
-          let xmargin = model.CanvasInfo.Width * 0.2
-          let ymargin = model.CanvasInfo.Height * 0.2
+          // simply loop our positions on screen ;)
+          //let xmargin = model.CanvasInfo.Width * 0.2
+          //let ymargin = model.CanvasInfo.Height * 0.2
+          let x,y,next =
+            match model.LastLabelPosition with
+            | Top ->
+              model.CanvasInfo.Width * 0.4,model.CanvasInfo.Height * 0.25,Right
+
+            | Bottom ->
+              model.CanvasInfo.Width * 0.4,model.CanvasInfo.Height * 0.75,Left
+
+            | Left ->
+              model.CanvasInfo.Width * 0.15,model.CanvasInfo.Height * 0.5,Top
+
+            | Right ->
+              model.CanvasInfo.Width * 0.65,model.CanvasInfo.Height * 0.5,Bottom
+
+          (*
           let x = model.CanvasInfo.Width * 0.1 + ( model.CanvasInfo.Width * 0.4) * JS.Math.random()
           let y = ( model.CanvasInfo.Height - ymargin * 2.) * JS.Math.random()
           let y = if y < 50. then 500. * JS.Math.random() else y
-
+          *)
           // note our LifeDec value which is very high!
           // that's because we don't want to add these labels more than once
           // so once they are actually drawn they will be deleted from our lists
@@ -384,7 +321,7 @@ let update (msg: Msg) (model: Model) =
             |]
 
           let psa = [model.TopParticles;particles] |> Array.concat
-          {model with TopParticles= psa; Screen = DoNothing; TopAnimation=Some TextLabel }
+          {model with LastLabelPosition=next; TopParticles= psa; Screen = DoNothing; TopAnimation=Some TextLabel }
 
       // Elmish Power: easy to understand, isnt'it?
       | OnClick -> proceedToNextScreen

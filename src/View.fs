@@ -6,6 +6,7 @@ open Fable.Core
 open Fable.Core.JsInterop
 open Fable.Import.Browser
 open Fable.Import.JS
+open Types
 
 // Our base Resolution,
 // scale will be updated according to the width of the actual screen

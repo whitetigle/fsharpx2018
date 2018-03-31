@@ -5,7 +5,7 @@ open System
 open Fable.Import
 
 let inline private requestFrame f =
-    Browser.window.requestAnimationFrame(Browser.FrameRequestCallback f) |> ignore
+    Browser.window.requestAnimationFrame( f) |> ignore
 
 let withAnimationWorker
     (program:Elmish.Program<_,'model,'msg,_>) =

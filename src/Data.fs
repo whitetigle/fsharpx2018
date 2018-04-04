@@ -277,7 +277,7 @@ let Screens =
               ClearScreen TopScreen
 
               ClearScreen BottomScreen
-              DisplayText "Fable is my ink. F# is my pen. I use JS pages."
+              DisplayText "Fable is my ink. F# is my pen"
               ClearScreen TopScreen
 
 (******************************* FABLE: INTRODUCTION ********************************************)

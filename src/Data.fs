@@ -10,16 +10,14 @@ let Screens =
               ClearScreen BottomScreen
               ClearScreen TopScreen
 
+              DisplayText "Hello!"
+              ClearScreen TopScreen
+
               DisplayText "Fable"
               ClearScreen TopScreen
 
               DisplayText "For busy\n moms and dads!"
               ClearScreen TopScreen
-
-              AddLabel "Hello!"
-              AddLabel "How are you?"
-              ClearScreen TopScreen
-              ClearScreen BottomScreen
 
 (******************************* WHO AM I ********************************************)
 
@@ -27,69 +25,153 @@ let Screens =
               ClearScreen TopScreen
 
               AddLabel "French!"
-              AddLabel "French?!"
-              AddLabel "Holy Cows!!"
-              AddLabel "Frogs?"
-              ClearScreen TopScreen
-
-              AddLabel "Cheese?"
+              AddLabel "Bordeaux"
+              AddLabel "Wine"
               AddLabel "strong accent"
-              AddLabel "wine"
-              AddLabel "food"
+              ClearScreen TopScreen
+
+              DisplayText "Once upon a time..."
               ClearScreen TopScreen
               ClearScreen BottomScreen
-
-(******************************* PAPER STORY ********************************************)
-
-              DisplayText "My kids love paper!"
-              ClearScreen TopScreen
-
-              DisplayText "We can do so many things!"
-              ClearScreen TopScreen
-
-              AddLabel "drawings"
-              AddLabel "origami"
-              AddLabel "blueprints"
-              ClearScreen TopScreen
-
-              DisplayText "Gateway to brand new worlds!"
-              ClearScreen TopScreen
-
-              ClearScreen BottomScreen
-              DisplayText "Fable is my ink. F# is my pen."
-              ClearScreen TopScreen
-
-(******************************* FABLE: INTRODUCTION ********************************************)
-
-              DisplayText "So? What's Fable?"
-              ClearScreen TopScreen
-
-              DisplayText "A JS transpiler for F#"
-              ClearScreen TopScreen
-
-              DisplayText "on top of"
-              ClearScreen TopScreen
-
-              AddLabel "Babel.js"
-              AddLabel "Dotnet"
-              AddLabel "Webpack"
-
-              ClearScreen TopScreen
-              ClearScreen BottomScreen
-
 
 (******************************* WORKING WITH FABLE  ********************************************)
 
-              DisplayText "My story... A true dad's story!"
+              DisplayText "Languages"
               ClearScreen TopScreen
 
-              DisplayText "Before 2010: Gamedev on MMOG"
+              DisplayText "English"
               ClearScreen TopScreen
 
-              DisplayText "Since 2010: Frontend & DevOps"
+              DisplayText "since my childhood"
               ClearScreen TopScreen
 
-              DisplayText "Frontend: HTML5 and JS"
+              DisplayText "Share & communicate"
+              ClearScreen TopScreen
+
+              DisplayText "C"
+              ClearScreen TopScreen
+
+              DisplayText "BASIC"
+              ClearScreen TopScreen
+
+              DisplayText "Developer"
+              ClearScreen TopScreen
+
+              DisplayText "Java"
+              ClearScreen TopScreen
+
+              DisplayText "C++"
+              ClearScreen TopScreen
+
+              DisplayText "SQL"
+              ClearScreen TopScreen
+
+              DisplayText "Dig. Analyse. Understand."
+              ClearScreen TopScreen
+
+              DisplayText "XML"
+              ClearScreen TopScreen
+
+              DisplayText "Share"
+              ClearScreen TopScreen
+
+              DisplayText "Developer and GD on MMOGs"
+              ClearScreen TopScreen
+
+              DisplayText "Browsers"
+              ClearScreen TopScreen
+
+              DisplayText "C++ / PHP / Java"
+              ClearScreen TopScreen
+
+              DisplayText "Javascript"
+              ClearScreen TopScreen
+
+              DisplayText "HTML"
+              ClearScreen TopScreen
+
+              DisplayText "CSS"
+              ClearScreen TopScreen
+
+              DisplayText "Flash Games"
+              ClearScreen TopScreen
+
+              DisplayText "Action script"
+              ClearScreen TopScreen
+
+              DisplayText "Then..."
+              ClearScreen TopScreen
+
+              DisplayText "HAXE everywhere"
+              ClearScreen TopScreen
+
+              DisplayText "WORK=PASSION"
+              ClearScreen TopScreen
+
+              DisplayText "APPROX. 81.79% of my life"
+              ClearScreen TopScreen
+
+              DisplayText "Crafting games"
+              ClearScreen TopScreen
+
+              DisplayText "Writing game designs"
+              ClearScreen TopScreen
+
+              DisplayText "Writing rules systems"
+              ClearScreen TopScreen
+
+              DisplayText "managing hundred thousands of players"
+              ClearScreen TopScreen
+
+              DisplayText "thinking UML"
+              ClearScreen TopScreen
+
+              AddLabel "OOP"
+              AddLabel "OOP"
+              AddLabel "OOP"
+              AddLabel "OOP"
+              ClearScreen TopScreen
+
+              DisplayText "Living the dream?"
+              ClearScreen TopScreen
+
+              DisplayText "Workhaolic"
+              ClearScreen TopScreen
+
+              DisplayText "What about kids?"
+              ClearScreen TopScreen
+
+              DisplayText "Since 2010: CHANGE"
+              ClearScreen TopScreen
+
+              DisplayText "3rd Child"
+              ClearScreen TopScreen
+
+              DisplayText "Escape the bubble"
+              ClearScreen TopScreen
+
+              DisplayText "Indie Video games"
+              ClearScreen TopScreen
+
+              DisplayText "Too much competition"
+              ClearScreen TopScreen
+
+              DisplayText "Passion... again..."
+              ClearScreen TopScreen
+
+              DisplayText "My goal: Kids first!"
+              ClearScreen TopScreen
+
+              DisplayText "Consulting"
+              ClearScreen TopScreen
+
+              DisplayText "GAMIFICATION"
+              ClearScreen TopScreen
+
+              DisplayText "DEVELOPMENT"
+              ClearScreen TopScreen
+
+              DisplayText "Everybody wants HTML5 and JS"
               ClearScreen TopScreen
 
               AddLabel "desktop apps"
@@ -98,16 +180,13 @@ let Screens =
               AddLabel "backends"
               ClearScreen TopScreen
 
-              DisplayText "In JS..."
-              ClearScreen TopScreen
-
               AddLabel "Runtime errors"
               ClearScreen TopScreen
 
               AddLabel "long hours coding"
               AddLabel "long hours debugging"
-              AddLabel "Kids sad"
-              AddLabel "Daddy sad"
+              AddLabel "Kids sad?"
+              AddLabel "=Daddy sad :("
               ClearScreen TopScreen
 
               DisplayText "Here come transpilers"
@@ -124,9 +203,6 @@ let Screens =
 
               AddLabel "Frontend"
               AddLabel "Backend"
-              ClearScreen TopScreen
-
-              DisplayText "OOP is never cheap"
               ClearScreen TopScreen
 
               ClearScreen BottomScreen
@@ -154,8 +230,53 @@ let Screens =
               AddLabel "reading?"
               AddLabel "understanding?"
               ClearScreen TopScreen
+              ClearScreen BottomScreen
 
-              DisplayText "Fable!"
+              DisplayText "What I learnt?"
+              ClearScreen TopScreen
+
+              DisplayText "After all these years?"
+              ClearScreen TopScreen
+
+              DisplayText "Using OOP is never free!"
+              ClearScreen TopScreen
+
+              DisplayText "Using OOP is always costly!"
+              ClearScreen TopScreen
+
+              DisplayText "Then one day..."
+              ClearScreen TopScreen
+              ClearScreen BottomScreen
+
+(******************************* PAPER STORY ********************************************)
+
+              DisplayText "My kids love paper!"
+              ClearScreen TopScreen
+
+              DisplayText "We can do so many things!"
+              ClearScreen TopScreen
+
+              AddLabel "drawings"
+              AddLabel "origami"
+              AddLabel "blueprints"
+              ClearScreen TopScreen
+
+              DisplayText "Gateway to brand new worlds!"
+              ClearScreen TopScreen
+
+              DisplayText "Fable..."
+              ClearScreen TopScreen
+
+              ClearScreen BottomScreen
+              DisplayText "Fable is my ink. F# is my pen. I use JS pages."
+              ClearScreen TopScreen
+
+(******************************* FABLE: INTRODUCTION ********************************************)
+
+              DisplayText "So? What's Fable?"
+              ClearScreen TopScreen
+
+              DisplayText "A JS transpiler for F#"
               ClearScreen TopScreen
 
               DisplayText "F#"

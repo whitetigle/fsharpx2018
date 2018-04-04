@@ -39,40 +39,49 @@ let Screens =
               DisplayText "Languages"
               ClearScreen TopScreen
 
-              DisplayText "English"
-              ClearScreen TopScreen
-
               DisplayText "since my childhood"
               ClearScreen TopScreen
 
               DisplayText "Share & communicate"
               ClearScreen TopScreen
 
-              DisplayText "C"
+              DisplayText "English"
               ClearScreen TopScreen
 
               DisplayText "BASIC"
               ClearScreen TopScreen
 
+              DisplayText "Emily Dickinson"
+              ClearScreen TopScreen
+
+              DisplayText "C"
+              ClearScreen TopScreen
+
               DisplayText "Developer"
+              ClearScreen TopScreen
+
+              DisplayText "I have a Mother!"
               ClearScreen TopScreen
 
               DisplayText "Java"
               ClearScreen TopScreen
 
-              DisplayText "C++"
+              DisplayText "I have a Father!"
               ClearScreen TopScreen
 
-              DisplayText "SQL"
+              DisplayText "C++"
               ClearScreen TopScreen
 
               DisplayText "Dig. Analyse. Understand."
               ClearScreen TopScreen
 
-              DisplayText "XML"
+              DisplayText "SQL"
               ClearScreen TopScreen
 
-              DisplayText "Share"
+              DisplayText "The Doodle."
+              ClearScreen TopScreen
+
+              DisplayText "XML"
               ClearScreen TopScreen
 
               DisplayText "Developer and GD on MMOGs"
@@ -120,7 +129,7 @@ let Screens =
               DisplayText "Writing rules systems"
               ClearScreen TopScreen
 
-              DisplayText "managing hundred thousands of players"
+              DisplayText "managing systems for >1M players"
               ClearScreen TopScreen
 
               DisplayText "thinking UML"

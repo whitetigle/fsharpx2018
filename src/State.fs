@@ -188,7 +188,7 @@ let update (msg: Msg) (model: Model) =
         | ClearScreen which->
           match which with
           | TopScreen ->
-            {model with Screen = DoNothing; TopParticles = [||]}
+            {model with Screen = NextScreen; TopParticles = [||]}
           | BottomScreen ->
             {model with Screen = StartBackground; BottomParticles = [||]}
 

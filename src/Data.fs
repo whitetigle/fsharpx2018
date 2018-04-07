@@ -19,6 +19,38 @@ let Screens =
               DisplayText "For busy\n moms and dads!"
               ClearScreen TopScreen
 
+              ClearScreen BottomScreen
+
+(******************************* THANKS ********************************************)
+
+              DisplayText "Thank you!"
+              ClearScreen TopScreen
+
+
+(******************************* INTRODUCTION ********************************************)
+
+
+              DisplayText "Coding may be our passion"
+              ClearScreen TopScreen
+
+              DisplayText "But we are much more than this"
+              ClearScreen TopScreen
+
+              DisplayText  "In order to enjoy our lives fully"
+              ClearScreen TopScreen
+
+              DisplayText "In order to have time" 
+              ClearScreen TopScreen
+
+              DisplayText "to be more than coders!" 
+              ClearScreen TopScreen
+
+              DisplayText " We need great tools!"
+              ClearScreen TopScreen
+
+              ClearScreen BottomScreen
+
+
 (******************************* WHO AM I ********************************************)
 
               DisplayText "Francois Nicaise"
@@ -36,10 +68,10 @@ let Screens =
 
 (******************************* WORKING WITH FABLE  ********************************************)
 
-              DisplayText "Languages"
+              DisplayText "since my childhood"
               ClearScreen TopScreen
 
-              DisplayText "since my childhood"
+              DisplayText "Languages"
               ClearScreen TopScreen
 
               DisplayText "Share & communicate"
@@ -51,8 +83,14 @@ let Screens =
               DisplayText "BASIC"
               ClearScreen TopScreen
 
+              DisplayText "Litterature"
+              ClearScreen TopScreen              
+
               DisplayText "Emily Dickinson"
               ClearScreen TopScreen
+
+              DisplayText "Then programming"
+              ClearScreen TopScreen              
 
               DisplayText "C"
               ClearScreen TopScreen
@@ -60,13 +98,16 @@ let Screens =
               DisplayText "Developer"
               ClearScreen TopScreen
 
-              DisplayText "I have a Mother!"
+              DisplayText "Monotheism"
               ClearScreen TopScreen
 
               DisplayText "Java"
               ClearScreen TopScreen
 
-              DisplayText "I have a Father!"
+              DisplayText "The almighty Object"
+              ClearScreen TopScreen
+
+              DisplayText "Polytheism"
               ClearScreen TopScreen
 
               DisplayText "C++"
@@ -83,11 +124,12 @@ let Screens =
 
               DisplayText "XML"
               ClearScreen TopScreen
-
+              ClearScreen BottomScreen
+              
               DisplayText "Developer and GD on MMOGs"
               ClearScreen TopScreen
 
-              DisplayText "Browsers"
+              DisplayText "F2P Browser games"
               ClearScreen TopScreen
 
               DisplayText "C++ / PHP / Java"
@@ -113,6 +155,7 @@ let Screens =
 
               DisplayText "HAXE everywhere"
               ClearScreen TopScreen
+              ClearScreen BottomScreen
 
               DisplayText "WORK=PASSION"
               ClearScreen TopScreen
@@ -129,10 +172,10 @@ let Screens =
               DisplayText "Writing rules systems"
               ClearScreen TopScreen
 
-              DisplayText "managing systems for >1M players"
+              DisplayText "managing systems"
               ClearScreen TopScreen
 
-              DisplayText "thinking UML"
+              DisplayText "for hundred thousand players"
               ClearScreen TopScreen
 
               AddLabel "OOP"
@@ -159,6 +202,9 @@ let Screens =
               DisplayText "Escape the bubble"
               ClearScreen TopScreen
 
+              DisplayText "2010-2013?"
+              ClearScreen TopScreen
+
               DisplayText "Indie Video games"
               ClearScreen TopScreen
 
@@ -168,16 +214,19 @@ let Screens =
               DisplayText "Passion... again..."
               ClearScreen TopScreen
 
-              DisplayText "My goal: Kids first!"
+              DisplayText "Since 2013: New goals!"
+              ClearScreen TopScreen
+
+              DisplayText "Kids first!"
+              ClearScreen TopScreen
+
+              DisplayText "People first!"
+              ClearScreen TopScreen
+
+              DisplayText "Life first!"
               ClearScreen TopScreen
 
               DisplayText "Consulting"
-              ClearScreen TopScreen
-
-              DisplayText "GAMIFICATION"
-              ClearScreen TopScreen
-
-              DisplayText "DEVELOPMENT"
               ClearScreen TopScreen
 
               DisplayText "Everybody wants HTML5 and JS"
@@ -189,16 +238,23 @@ let Screens =
               AddLabel "backends"
               ClearScreen TopScreen
 
-              AddLabel "Runtime errors"
+              DisplayText "How Can I be productive?"
               ClearScreen TopScreen
 
-              AddLabel "long hours coding"
-              AddLabel "long hours debugging"
-              AddLabel "Kids sad?"
-              AddLabel "=Daddy sad :("
+              DisplayText "With... JS?"
               ClearScreen TopScreen
 
-              DisplayText "Here come transpilers"
+              AddLabel "code in 2 minutes"
+              AddLabel "debug for years"
+              ClearScreen TopScreen
+
+              DisplayText "Runtime errors?"
+              ClearScreen TopScreen
+
+              DisplayText "No way!"
+              ClearScreen TopScreen
+
+              DisplayText "Here come transpilers!"
               ClearScreen TopScreen
 
               DisplayText "Haxe"
@@ -208,6 +264,8 @@ let Screens =
               AddLabel "Oriented Object"
               AddLabel "Pattern matching"
               AddLabel "Typed"
+              ClearScreen TopScreen              
+              AddLabel "Roots from OCAML"
               ClearScreen TopScreen
 
               AddLabel "Frontend"
@@ -231,7 +289,7 @@ let Screens =
               AddLabel "idea"
               ClearScreen TopScreen
 
-              DisplayText "Scala outsmarted me"
+              DisplayText "Way too smart for me"
               ClearScreen TopScreen
 
               AddLabel "writing?"
@@ -240,6 +298,8 @@ let Screens =
               AddLabel "understanding?"
               ClearScreen TopScreen
               ClearScreen BottomScreen
+
+(******************************* PAPER STORY ********************************************)
 
               DisplayText "What I learnt?"
               ClearScreen TopScreen
@@ -273,22 +333,35 @@ let Screens =
               DisplayText "Gateway to brand new worlds!"
               ClearScreen TopScreen
 
-              DisplayText "Fable..."
+              DisplayText "With Fable it's the same."
               ClearScreen TopScreen
 
-              ClearScreen BottomScreen
-              DisplayText "Fable is my ink. F# is my pen"
+              DisplayText "I can do quite everything"
               ClearScreen TopScreen
+
+              DisplayText "And I've got a good pen: F#"
+              ClearScreen BottomScreen
+              ClearScreen TopScreen
+
 
 (******************************* FABLE: INTRODUCTION ********************************************)
 
-              DisplayText "So? What's Fable?"
+              DisplayText "Yet another transpiler?"
               ClearScreen TopScreen
 
-              DisplayText "A JS transpiler for F#"
+              DisplayText "No!"
               ClearScreen TopScreen
 
               DisplayText "F#"
+              ClearScreen TopScreen
+
+              AddLabel "Oriented Object"
+              AddLabel "Functional"
+              AddLabel "Types"
+              ClearScreen TopScreen
+
+              ClearScreen BottomScreen
+              DisplayText "Simple yet powerful!"
               ClearScreen TopScreen
 
               AddLabel "I can read"
@@ -297,30 +370,33 @@ let Screens =
               AddLabel "I can fly!"
               ClearScreen TopScreen
 
-              AddLabel "Oriented Object"
-              AddLabel "Functional"
-              AddLabel "Typed"
-              ClearScreen TopScreen
-
               AddLabel "Frontend"
               AddLabel "Backend"
+              ClearScreen TopScreen
+              ClearScreen BottomScreen
+
+              DisplayText "Great Tools!"
               ClearScreen TopScreen
 
               AddLabel "VSCode"
               AddLabel "Ionide"
               AddLabel "Mechanic"
+              AddLabel "Fake"
               ClearScreen TopScreen
 
-              DisplayText "Great modern output"
+              DisplayText "Fable power?"
+              ClearScreen TopScreen
+
+              DisplayText "Great readable output"
+              ClearScreen TopScreen
+
+              DisplayText "Modern output"
               ClearScreen TopScreen
 
               DisplayText "JS you can be proud of!"
               ClearScreen TopScreen
 
-              DisplayText "Easy interop"
-              ClearScreen TopScreen
-
-              AddLabel "ts2fable"
+              DisplayText "Great interop"
               ClearScreen TopScreen
 
               DisplayText "Stable. Robust. Prod ready."
@@ -349,8 +425,8 @@ let Screens =
               DisplayText "SPA: Fable clearly shines!"
               ClearScreen TopScreen
 
-
               AddLabel "Elmish"
+              AddLabel "React"
               AddLabel "Fulma"
               AddLabel "Thot"
               ClearScreen TopScreen
@@ -433,7 +509,6 @@ let Screens =
 
               DisplayText "Scripting..."
               ClearScreen TopScreen
-              ClearScreen BottomScreen
 
 
               (* Scripting  ********************************************)
@@ -445,48 +520,41 @@ let Screens =
               ClearScreen TopScreen
               ClearScreen BottomScreen
 
-(******************************* PERSONAL THOUGHTS ********************************************)
+(*******************************  GOTCHAS  ********************************************)
 
-              DisplayText "In 2010 I quit my job."
-              ClearScreen TopScreen
-
-              DisplayText "My 3rd child was coming."
+              DisplayText "Any gotchas?"
               ClearScreen TopScreen
 
-              DisplayText "After years of office work..."
+              DisplayText "Rough around the edges"
               ClearScreen TopScreen
 
-              DisplayText "More time with my family"
+              AddLabel "still young"
+              AddLabel "interop"
+              AddLabel "lacks some inner doc"
               ClearScreen TopScreen
 
-              AddLabel "No more open space"
-              ClearScreen TopScreen
-              DisplayText "Home office"
+              DisplayText "But it's getting better"
               ClearScreen TopScreen
 
-              AddLabel "less time commuting"
-              ClearScreen TopScreen
-              DisplayText "more games with kids"
+              DisplayText "Best to have a prior knowledge"
               ClearScreen TopScreen
 
-              AddLabel "less coding"
-              ClearScreen TopScreen
-              DisplayText "more thinking"
+              DisplayText "of JS Libs"
               ClearScreen TopScreen
 
-              AddLabel "More action"
-              AddLabel "More passion"
-              AddLabel "More life"
+              DisplayText "yet there is enough doc"
               ClearScreen TopScreen
 
-              DisplayText "More HUMAN!"
+              DisplayText "on stackoverflow"
               ClearScreen TopScreen
 
-              DisplayText "Help other human beings..."
+              DisplayText "??"
               ClearScreen TopScreen
-              DisplayText "solve their problems"
+
+              AddLabel "It's JS"
+              AddLabel "It's F#"
               ClearScreen TopScreen
-              ClearScreen BottomScreen
+
 
 (******************************* COMMUNITY ********************************************)
 
@@ -503,21 +571,47 @@ let Screens =
               AddLabel "Funny"
               ClearScreen TopScreen
 
+              DisplayText "Available 24/24 7/7"
+              ClearScreen TopScreen
+
+              DisplayText "At least... Maxime Mangel!"
+              ClearScreen TopScreen
+
+              DisplayText "Social Networks?"
+              ClearScreen TopScreen
+
+              DisplayText "Of course!"
+              ClearScreen TopScreen
+
               AddLabel "slack"
               AddLabel "gitter"
               AddLabel "twitter"
-              AddLabel "phone"
-              AddLabel "fax"
-              AddLabel "telex"
-              AddLabel "irc"
-              AddLabel "whatsapp"
-              AddLabel "(only Alfonso)"
               ClearScreen TopScreen
+
+              DisplayText "Legacy too!"
+              ClearScreen TopScreen
+
+              AddLabel "irc"
+              AddLabel "bbs"
+              ClearScreen TopScreen
+
+              DisplayText "Alfonso's fav tool!"
+              ClearScreen TopScreen              
+
+              AddLabel "ICQ"
+              ClearScreen TopScreen              
+
               ClearScreen BottomScreen
 
 (*******************************  OVERALL THOUGHTS ********************************************)
 
               DisplayText "18 months later..."
+              ClearScreen TopScreen
+
+              DisplayText "Less coding"
+              ClearScreen TopScreen
+
+              DisplayText "More thinking"
               ClearScreen TopScreen
 
               DisplayText "I love F#"
@@ -537,6 +631,7 @@ let Screens =
               AddLabel "to maintain"
               AddLabel "to read"
               AddLabel "to refactor"
+
               ClearScreen TopScreen
               AddLabel "less bugs"
               AddLabel "less tests"
@@ -544,6 +639,19 @@ let Screens =
 
               DisplayText "More of everything else!"
               ClearScreen TopScreen
+
+              DisplayText "More time to..."
+              ClearScreen TopScreen
+
+              DisplayText "Help other human beings..."
+              ClearScreen TopScreen
+              DisplayText "solve their problems"
+              ClearScreen TopScreen
+
+              DisplayText "Play with my kids"
+              ClearScreen TopScreen
+
+              ClearScreen BottomScreen
 
               DisplayText "And I love Fable"
               ClearScreen TopScreen
@@ -560,7 +668,16 @@ let Screens =
               DisplayText "I built several apps"
               ClearScreen TopScreen
 
-              DisplayText "No bugs. It's true."
+              DisplayText "Less than 1.23% bugs. It's true."
+              ClearScreen TopScreen
+
+              DisplayText "I wrote them bugs!"
+              ClearScreen TopScreen
+
+              DisplayText "Ready for a daily use."
+              ClearScreen TopScreen
+
+              DisplayText "Remember..."
               ClearScreen TopScreen
 
               DisplayText "If it compiles: it works."
@@ -568,35 +685,6 @@ let Screens =
 
               ClearScreen BottomScreen
 
-(*******************************  HOW TO START  ********************************************)
-
-              DisplayText "Any gotchas?"
-              ClearScreen TopScreen
-
-              DisplayText "Rough around the edges"
-              ClearScreen TopScreen
-
-              AddLabel "still young"
-              AddLabel "interop"
-              AddLabel "lacks some doc"
-              ClearScreen TopScreen
-
-              DisplayText "But it's getting better"
-              ClearScreen TopScreen
-
-              DisplayText "yet there is enough doc"
-              ClearScreen TopScreen
-
-              DisplayText "on stackoverflow"
-              ClearScreen TopScreen
-
-              DisplayText "??"
-              ClearScreen TopScreen
-
-              AddLabel "It's JS"
-              AddLabel "It's F#"
-              ClearScreen TopScreen
-              ClearScreen BottomScreen
 
 (*******************************  HOW TO START  ********************************************)
 
@@ -618,11 +706,15 @@ let Screens =
               DisplayText "Read unit tests"
               ClearScreen TopScreen
 
-              DisplayText "start with .fsx"
+              DisplayText "start with simple scripts"
               ClearScreen TopScreen
 
               DisplayText "use VSCode + Ionide + Mechanic"
               ClearScreen TopScreen
+
+              DisplayText "And go to meetups!"
+              ClearScreen TopScreen
+
               ClearScreen BottomScreen
 
 (*******************************  Last word  ********************************************)
@@ -630,7 +722,10 @@ let Screens =
               DisplayText "Happy dad!"
               ClearScreen TopScreen
 
-              DisplayText "@thewhitetigle"
+              DisplayText "Happy man!"
+              ClearScreen TopScreen
+
+              DisplayText "Join our band of happy people!"
               ClearScreen TopScreen
 
 (*******************************  Credits  ********************************************)
@@ -647,8 +742,6 @@ let Screens =
               DisplayText "Mechanic"
               ClearScreen TopScreen
 
-              DisplayText "Fake"
-              ClearScreen TopScreen
               ClearScreen BottomScreen
 
 (*******************************  AMA  ********************************************)
